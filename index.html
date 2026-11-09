@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portal</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #0b0f19 0%, #111827 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            background: linear-gradient(45deg, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            width: 100%;
+            max-width: 450px;
+        }
+        @media (max-width: 400px) {
+            .grid-container { grid-template-columns: repeat(2, 1fr); }
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            color: #e5e7eb;
+            font-weight: bold;
+            transition: all 0.2s ease;
+        }
+        .card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-3px);
+        }
+        .youtube:hover { border-color: #ef4444; color: #ef4444; }
+        .geforce:hover { border-color: #22c55e; color: #22c55e; }
+        .google:hover { border-color: #3b82f6; color: #3b82f6; }
+        .duck:hover { border-color: #f97316; color: #f97316; }
+        .twitter:hover { border-color: #38bdf8; color: #38bdf8; }
+        .twitch:hover { border-color: #a855f7; color: #a855f7; }
+    </style>
+</head>
+<body>
+
+    <h1>Web Portal</h1>
+    
+    <div class="grid-container">
+        <a class="card youtube" href="https://youtube.com" target="_blank">YouTube</a>
+        <a class="card geforce" href="https://geforcenow.com" target="_blank">GeForce NOW</a>
+        <a class="card google" href="https://google.com" target="_blank">Google</a>
+        <a class="card duck" href="https://duckduckgo.com" target="_blank">DuckDuckGo</a>
+        <a class="card twitter" href="https://x.com" target="_blank">X (Twitter)</a>
+        <a class="card twitch" href="https://twitch.tv" target="_blank">Twitch</a>
+    </div>
+
+</body>
+</html>
